@@ -31,7 +31,7 @@ try {
   console.log("firebase-manager admin get app--- app not avaliable so initialize it", error);
 
   firebaseApp = admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
+    credential: admin.credential.cert(JSON.stringify(serviceAccount)),
     databaseURL: 'https://aaq-login-db-chat.firebaseio.com', // Replace with your Firebase project URL
     // to do - in url part the project url shal come from config file idelly fro env 
   });
